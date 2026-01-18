@@ -3,6 +3,11 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
+// ===== HOME ROUTE =====
+app.get("/", (req, res) => {
+  res.send("Baggage API is live ✅");
+});
+
 // ===== SIMPLE HEALTH CHECK =====
 app.get("/health", (req, res) => {
   res.json({ status: "ok" });
